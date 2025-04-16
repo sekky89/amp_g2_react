@@ -25,3 +25,5 @@ dist-ssr
 .react-router/
 .amplify/
 amplify_outputs.json
+build/
+dist/

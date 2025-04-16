@@ -5,13 +5,13 @@ frontend:
       commands:
         - curl -fsSL https://bun.sh/install | bash
         - source /root/.bashrc
-        - bun i
+        - bun i -y
     build:
       commands:
         - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
         - bun run build
   artifacts:
-    baseDirectory: dist
+    baseDirectory: build
     files:
       - "**/*"
   cache:
