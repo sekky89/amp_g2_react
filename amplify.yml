@@ -13,7 +13,7 @@ frontend:
         - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
         - bun run build
   artifacts:
-    baseDirectory: build
+    baseDirectory: build/client
     files:
       - "**/*"
   cache:
