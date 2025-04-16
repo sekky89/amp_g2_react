@@ -6,7 +6,7 @@ frontend:
         - curl -fsSL https://bun.sh/install | bash
         - source /root/.bashrc
         - bun i
-        - npx ampx pipeline-deploy --branch $BRANCH --app-id $APP_ID
+        - npx ampx pipeline-deploy --branch $BRANCH_NAME --app-id $AMPLIFY_APP_ID
     build:
       commands:
         - bun run build
