@@ -8,7 +8,7 @@ frontend:
         - bun i
     build:
       commands:
-        - npx ampx pipeline-deploy --branch $BRANCH_NAME --app-id $AMPLIFY_APP_ID
+        - npx ampx generate outputs
         - bun run build
   artifacts:
     baseDirectory: dist
