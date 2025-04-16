@@ -9,10 +9,8 @@ frontend:
     build:
       commands:
         - bun run build
-        - cd build/compute/default/
-        - bun i --production
   artifacts:
-    baseDirectory: build
+    baseDirectory: dist
     files:
       - "**/*"
   cache:
