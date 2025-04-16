@@ -11,6 +11,12 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import { Amplify } from "aws-amplify";
+import "@aws-amplify/ui-react/styles.css";
+import { Authenticator } from "@aws-amplify/ui-react";
+import outputs from "../amplify_outputs.json";
+
+Amplify.configure(outputs);
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -31,7 +37,11 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 };
 
 export const App = () => {
-  return <Outlet />;
+  return (
+    <Authenticator>
+      <Outlet />
+    </Authenticator>
+  );
 };
 export default App;
 
