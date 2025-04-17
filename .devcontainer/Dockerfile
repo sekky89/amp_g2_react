@@ -2,7 +2,7 @@ FROM debian:stable-slim as mise
 
 RUN apt-get update  \
     && apt-get -y --no-install-recommends install  \
-    sudo curl git ca-certificates \
+    sudo curl git ca-certificates gpg gpg-agent \
     && rm -rf /var/lib/apt/lists/*
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -18,6 +18,6 @@ FROM mise
 WORKDIR /workspace
 ENV TZ=Asia/Tokyo
 
-RUN mise use -g node@22 bun@1.2 biome@1.9.4 aws-cli jq yq
-RUN bun i -g sst orval @redocly/cli
+RUN mise use -g node@22 yarn@1 bun@1.2 biome@1.9.4 aws-cli jq yq
+RUN bun i -g sst orval @redocly/cli prettier
 ENV PATH="/root/.bun/bin:$PATH"

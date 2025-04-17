@@ -1,0 +1,20 @@
+{
+  "name": "lambda1",
+  "private": true,
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@aws-sdk/rds-signer": "^3.787.0",
+    "@types/aws-lambda": "^8.10.149",
+    "@types/node": "^22.14.1",
+    "esbuild": "^0.25.2",
+    "mysql2": "^3.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "prisma": "^6.6.0"
+  }
+}

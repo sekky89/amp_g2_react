@@ -1,54 +1,55 @@
 {
-  "name": "amp-g2-react",
-  "build": {
-    "context": "..",
-    "dockerfile": "./Dockerfile"
-  },
-  "features": {
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
-    "ghcr.io/devcontainers/features/common-utils:2": {
-      "configureZshAsDefaultShell": true
-    }
-  },
-  "workspaceFolder": "/workspace",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-  "mounts": [
-    "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.aws,target=/root/.aws,type=bind,consistency=cached"
-  ],
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "formulahendry.auto-close-tag",
-        "steoates.autoimport",
-        "formulahendry.auto-rename-tag",
-        "oven.bun-vscode",
-        "wmaurer.change-case",
-        "mhutchie.git-graph",
-        "golang.go",
-        "wix.vscode-import-cost",
-        "ms-vscode.vscode-typescript-next",
-        "christian-kohler.path-intellisense",
-        "hoovercj.vscode-power-mode",
-        "biomejs.biome",
-        "redhat.vscode-yaml",
-        "amazonwebservices.aws-toolkit-vscode"
-      ],
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "zsh",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-          "quickfix.biome": "explicit",
-          "source.organizeImports.biome": "explicit"
-        },
-        "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc]": {
-          "editor.tabSize": 2,
-          "editor.defaultFormatter": "biomejs.biome"
-        },
-        "[yaml]": {
-          "editor.defaultFormatter": "redhat.vscode-yaml"
-        }
-      }
-    }
-  }
+	"name": "amp-g2-react",
+	"build": {
+		"context": "..",
+		"dockerfile": "./Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"configureZshAsDefaultShell": true
+		}
+	},
+	"workspaceFolder": "/workspace",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+	"mounts": [
+		"source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.aws,target=/root/.aws,type=bind,consistency=cached"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"formulahendry.auto-close-tag",
+				"steoates.autoimport",
+				"formulahendry.auto-rename-tag",
+				"oven.bun-vscode",
+				"wmaurer.change-case",
+				"mhutchie.git-graph",
+				"golang.go",
+				"wix.vscode-import-cost",
+				"ms-vscode.vscode-typescript-next",
+				"christian-kohler.path-intellisense",
+				"hoovercj.vscode-power-mode",
+				"biomejs.biome",
+				"redhat.vscode-yaml",
+				"amazonwebservices.aws-toolkit-vscode",
+				"Prisma.prisma"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"quickfix.biome": "explicit",
+					"source.organizeImports.biome": "explicit"
+				},
+				"[javascript][typescript][javascriptreact][typescriptreact][json][jsonc]": {
+					"editor.tabSize": 2,
+					"editor.defaultFormatter": "biomejs.biome"
+				},
+				"[yaml]": {
+					"editor.defaultFormatter": "redhat.vscode-yaml"
+				}
+			}
+		}
+	}
 }
