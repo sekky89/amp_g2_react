@@ -23,7 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 .react-router/
-.amplify/
-amplify_outputs.json
 build/
 dist/
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
